@@ -6,7 +6,7 @@ const genAI = new GoogleGenerativeAI(process.env.EXPO_PUBLIC_GEMINI_API_KEY!);
 
 // Prompt template to ensure JSON response
 const FIRST_AID_PROMPT_TEMPLATE = `
-You are a first aid information system. Provide basic first aid guidance and general information about over-the-counter medications for: [SYMPTOM]
+You are a first aid information system. Provide basic first aid guidance and general information about over-the-counter medications for: [SYMPTOM].generalMedications should be the medication available in kenya and commonly knowa.
 
 Return ONLY a JSON object in the following format, with no additional text or explanation:
 {
